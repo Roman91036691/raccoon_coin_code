@@ -1,0 +1,37 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.moneta{
+    height: 23vh;
+}
+
+.moneta:hover{
+    transform: scale(.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.moneta:active{
+    transform: scale(1);
+    transition: all 0.1s ease-in-out;
+}
+
+.moneta-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: .7rem;
+    text-align: center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raccoon Coin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: linear-gradient(160deg, #ff0000, #ff9900);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    #score {
+      font-size: 3em;
+      margin: 20px 0;
+      color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(160deg, #f6ff00, #ff0000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 1s infinite alternate;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #coin {
+      width: 150px;
+      height: 150px;
+      background-image: url('https://previews.dropbox.com/p/thumb/ACkJ3Kl0scD9uZyLcobJcEL67wxEoSMeze2RcCU3fHNjzClJ24vKw4oGIxQTGH3A0NNyU00RODdZKBT2GorQKw2kwmRyisBQWFppvCGzjW18w9v6FUgmCJ8UBRmEC5oMbky2yozb__HR_qffgNDp8vSF4xK1hhrNoY2wr8nfuGOAvHdS492gyFhJX6pnlt59xIyEs-46um1_qB7U-RcQvmeliKzrA6uIourVQGmTy1Knm0RHHPLdDkt0Vgktt9LBspLhvOHnGx1sxF-kD2rMpFQ3cqt4qQwbrZq3t7JoQ_paEIvNLXrEUfNbs0vIQ0A8mIR2YPjS0KMxrwP9dqFa0LhJ/p.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    #coin:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <h1>Raccoon Coin</h1>
+  <div id="score">0</div>
+  <div id="coin"></div>
+
+  <script>
+    let score = 0;
+    const scoreDisplay = document.getElementById("score");
+    const coin = document.getElementById("coin");
+
+    coin.addEventListener("click", () => {
+      score++;
+      scoreDisplay.textContent = score;
+    });
+  </script>
+</body>
+</html>
